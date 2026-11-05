@@ -35,7 +35,7 @@ FORCE_JOIN_UPDATE = "@CvexUpdates"
 FORCE_JOIN_UPDATE_LINK = "https://t.me/CvexUpdates"
 FORCE_JOIN_ENABLED = os.getenv("FORCE_JOIN", "1") in ("1", "true", "yes")
 
-HIT_CHANNEL_ID = int(os.getenv("HIT_CHANNEL_ID", "-1003710363350"))
+HIT_CHANNEL_ID = int(os.getenv("HIT_CHANNEL_ID", "-1004315023445"))
 HIT_ENABLED = os.getenv("HIT_ENABLED", "1") in ("1", "true", "yes")
 
 COOLDOWN_USER = int(os.getenv("COOLDOWN_USER", "20"))
