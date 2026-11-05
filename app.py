@@ -24,8 +24,8 @@ logging.getLogger('TeleBot').setLevel(logging.CRITICAL)
 # ==========================================
 # 🔥 CONFIG
 # ==========================================
-BOT_TOKEN = os.getenv("BOT_TOKEN", '8938853905:AAHl0WaxDBgU6qjPC5e6jfnr6l0RzpG90V4')
-OWNER_ID = int(os.getenv("OWNER_ID", "8366177400"))
+BOT_TOKEN = os.getenv("BOT_TOKEN", '9185171475:AAE406JKuUoy0cGgP652jctVeG3pTrYYGPQ')
+OWNER_ID = int(os.getenv("OWNER_ID", "6965488457"))
 OWNER_USERNAME = "@vexcse"
 BUY_LINK = "https://t.me/vexcse"
 
