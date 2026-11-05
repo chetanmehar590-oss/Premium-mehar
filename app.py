@@ -29,10 +29,10 @@ OWNER_ID = int(os.getenv("OWNER_ID", "6965488457"))
 OWNER_USERNAME = "@Hidden_Xman"
 BUY_LINK = "t.me/Hidden_Xman"
 
-FORCE_JOIN_CHANNEL = "@CvexChk"
-FORCE_JOIN_LINK = "https://t.me/CvexChk"
-FORCE_JOIN_UPDATE = "@CvexUpdates"
-FORCE_JOIN_UPDATE_LINK = "https://t.me/CvexUpdates"
+FORCE_JOIN_CHANNEL = "@PremiumKillerA"
+FORCE_JOIN_LINK = "https://t.me/PremiumKillerA"
+FORCE_JOIN_UPDATE = ""
+FORCE_JOIN_UPDATE_LINK = ""
 FORCE_JOIN_ENABLED = os.getenv("FORCE_JOIN", "1") in ("1", "true", "yes")
 
 HIT_CHANNEL_ID = int(os.getenv("HIT_CHANNEL_ID", "-1004315023445"))
