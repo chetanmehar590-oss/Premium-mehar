@@ -31,8 +31,9 @@ BUY_LINK = "t.me/Hidden_Xman"
 
 FORCE_JOIN_CHANNEL = "@PremiumKillerA"
 FORCE_JOIN_LINK = "https://t.me/PremiumKillerA"
-FORCE_JOIN_UPDATE = ""
-FORCE_JOIN_UPDATE_LINK = ""
+
+FORCE_JOIN_UPDATE = "@PremiumKillerB"
+FORCE_JOIN_UPDATE_LINK = "https://t.me/PremiumKillerB"
 FORCE_JOIN_ENABLED = os.getenv("FORCE_JOIN", "1") in ("1", "true", "yes")
 
 HIT_CHANNEL_ID = int(os.getenv("HIT_CHANNEL_ID", "-1004315023445"))
@@ -1527,22 +1528,20 @@ _join_cache = {}
 _join_lock = threading.Lock()
 
 def is_joined(uid):
-    if not FORCE_JOIN_ENABLED: return True
-    now = time.time()
-    with _join_lock:
-        hit = _join_cache.get(uid)
-        if hit and now - hit[1] < 120: return hit[0]
-    ok = True
+    if not FORCE_JOIN_ENABLED:
+        return True
+
     try:
         s1 = bot.get_chat_member(FORCE_JOIN_CHANNEL, uid).status
         s2 = bot.get_chat_member(FORCE_JOIN_UPDATE, uid).status
-        ok = s1 in ('creator', 'administrator', 'member') and s2 in ('creator', 'administrator', 'member')
-    except Exception:
-        ok = True
-    with _join_lock:
-        _join_cache[uid] = (ok, now)
-    return ok
 
+        allowed = ("creator", "administrator", "member")
+
+        return s1 in allowed and s2 in allowed
+
+    except Exception as e:
+        print(f"FORCE JOIN ERROR: {e}")
+        return False
 def get_plans_text():
     try:
         rows = list(db.plans.find({}).sort([("custom", 1), ("credits", 1)]))
