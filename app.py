@@ -26,7 +26,7 @@ logging.getLogger('TeleBot').setLevel(logging.CRITICAL)
 # ==========================================
 BOT_TOKEN = os.getenv("BOT_TOKEN", '9185171475:AAE406JKuUoy0cGgP652jctVeG3pTrYYGPQ')
 OWNER_ID = int(os.getenv("OWNER_ID", "6965488457"))
-OWNER_USERNAME = "@vexcse"
+OWNER_USERNAME = "@Hidden_Xman"
 BUY_LINK = "https://t.me/vexcse"
 
 FORCE_JOIN_CHANNEL = "@CvexChk"
