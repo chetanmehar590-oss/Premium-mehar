@@ -1788,6 +1788,12 @@ def cmd_start(message):
 def cmd_cmds(message):
     uid = message.from_user.id
     if is_banned(uid): return
+            if not is_joined(uid):
+        mk = types.InlineKeyboardMarkup()
+        mk.add(types.InlineKeyboardButton("📢 Join Channel", url=FORCE_JOIN_LINK))
+        mk.add(types.InlineKeyboardButton("📢 Join Updates", url=FORCE_JOIN_UPDATE_LINK))
+        mk.add(types.InlineKeyboardButton("✅ Verify", callback_data="verify_join"))
+        return safe_reply(message, f"{E_LAPTOP} <b>‼️ Join both channels to continue.</b>", parse_mode='HTML', reply_markup=mk)
     ensure_user(uid, message.from_user.username or "")
     safe_send(message.chat.id, f"<b>{E_STAR} Main Menu</b>\n{E_ARROW} Select option:", parse_mode='HTML', reply_markup=get_main_markup(uid))
 
