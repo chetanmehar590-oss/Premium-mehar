@@ -1788,7 +1788,7 @@ def cmd_start(message):
 def cmd_cmds(message):
     uid = message.from_user.id
     if is_banned(uid): return
-            if not is_joined(uid):
+    if not is_joined(uid):
         mk = types.InlineKeyboardMarkup()
         mk.add(types.InlineKeyboardButton("📢 Join Channel", url=FORCE_JOIN_LINK))
         mk.add(types.InlineKeyboardButton("📢 Join Updates", url=FORCE_JOIN_UPDATE_LINK))
