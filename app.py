@@ -1691,7 +1691,7 @@ def build_gw_page(page_type):
     for g in gws:
         cmd, name, price, cost, status, _, fmt = g
         em = E_CHECK if status == "ACTIVE" else (E_CROSS if status == "OFF" else E_WARN)
-        st = "Active" if status == "ACTIVE" else ("Off" if status == "OFF" else "Maint")
+        st = "Active" if status == "ACTIVE" else ("Off" if status == "OFF" else ("DEACTIVATED" if status == "DEACTIVATED" else "Maint"))
         pr_line = f" | Price » {price}" if price else ""
         tag = " · Auth" if not is_charge else ""
         txt += (f"{E_LINE}\n{E_STAR} <b>{h_esc(name)}</b>{tag}\n"
