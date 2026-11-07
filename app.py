@@ -1943,7 +1943,7 @@ def handle_cb(call):
         kb = [
             [{"text": "Active", "callback_data": f"admin_gw_upd_{cmd}_ACTIVE", "style": "success", "icon_custom_emoji_id": "5318760565902947324"},
              {"text": "Off", "callback_data": f"admin_gw_upd_{cmd}_OFF", "style": "danger", "icon_custom_emoji_id": "5316826301611390284"}],
-            [{"text": "Maintenance", "callback_data": f"admin_gw_upd_{cmd}_MAINT", "style": "primary", "icon_custom_emoji_id": "5278444373615337666"}],
+            [{"text": "DEACTIVATED", "callback_data": f"admin_gw_upd_{cmd}_MAINT", "style": "primary", "icon_custom_emoji_id": "5278444373615337666"}],
             [{"text": f"Type: {g[5]} ➡️", "callback_data": f"admin_gw_type_{cmd}", "style": "success", "icon_custom_emoji_id": BTN_TOOLS}],
             [{"text": "« Back", "callback_data": "admin_gw_list", "style": "primary", "icon_custom_emoji_id": BTN_BACK}]
         ]
