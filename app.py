@@ -2196,7 +2196,7 @@ def handle_cmd(message):
         return safe_reply(message, f"{E_CROSS} Unknown cmd: <code>{h_esc(cmd)}</code>\n{E_ARROW} /help", parse_mode='HTML')
     _, name, price, cost, status, gw_type, fmt = g
     if status == "OFF": return safe_reply(message, f"{E_CROSS} {h_esc(name)} OFF.", parse_mode='HTML')
-    if status == "MAINT": return safe_reply(message, f"{E_CROSS} {h_esc(name)} DEACTIVATED.", parse_mode='HTML')
+    if status == "DEACTIVATED": return safe_reply(message, f"{E_CROSS} {h_esc(name)} DEACTIVATED.", parse_mode='HTML')
     if gw_type == "PREMIUM" and not has_premium(uid):
         return safe_send(message.chat.id, get_premium_required_text(cmd), parse_mode='HTML', reply_markup=get_plans_markup())
 
