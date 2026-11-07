@@ -467,7 +467,7 @@ GATEWAYS_DATA = [
     ('yv', 'YVex', '$2.50', 1, 'ACTIVE', 'AUTH', 'cc|mm|yy|cvv'),
     ('rb', 'RByte', '$3.00', 1, 'ACTIVE', 'AUTH', 'cc|mm|yy|cvv'),
     ('6w', '6Wex', '$2.00', 1, 'ACTIVE', 'AUTH', 'cc|mm|yy|cvv'),
-    ('k1', '7Bot', '$3.04', 1, 'ACTIVE', 'PREMIUM', 'cc|mm|yy|cvv'),
+    ('k1', '7Bot', '$3.04', 1, 'DEACTIVATED', 'PREMIUM', 'cc|mm|yy|cvv'),
     ('k2', '4Zap', '$3.04', 1, 'ACTIVE', 'PREMIUM', 'cc|mm|yy|cvv'),
     ('k3', '9Byte', '$3.04', 1, 'ACTIVE', 'PREMIUM', 'cc|mm|yy|cvv'),
     ('k4', '3Hub', '$3.04', 1, 'ACTIVE', 'PREMIUM', 'cc|mm|yy|cvv'),
