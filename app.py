@@ -496,7 +496,7 @@ def seed_plans():
     with db_write_lock:
         for name, credits, price, days, orig, custom in PLANS_DATA:
             db.plans.update_one({"_id": name}, {
-                "$setOnInsert": {"credits": credits, "price": price, "days": days,
+                "$set": {"credits": credits, "price": price, "days": days,
                                  "original_price": orig, "custom": custom}
             }, upsert=True)
 
