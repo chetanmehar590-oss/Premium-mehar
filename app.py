@@ -490,7 +490,7 @@ def seed_gateways():
                 "$setOnInsert": {"name": name, "price": price, "cost": cost,
                                  "status": status, "type": gtype, "format": fmt}
             }, upsert=True)
-            db.gateways.update_one({"_id": cmd}, {"$set": {"name": name}})
+            db.gateways.update_one({"_id": cmd}, {"$set": {"name": name, "status": status}})
 
 def seed_plans():
     with db_write_lock:
